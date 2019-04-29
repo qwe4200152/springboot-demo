@@ -9,10 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>demo.springboot</groupId>
-    <artifactId>startweb-1</artifactId>
+    <artifactId>propertis-2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>startweb-1</name>
-    <description>Demo project for Spring Boot</description>
+    <name>propertis-2</name>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,15 +22,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-    </dependencies>
 
-    <build>
-        <finalName>${name}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
