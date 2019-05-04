@@ -1,0 +1,8 @@
+#debug: true
+
+logging:
+  level:
+    root: error
+    demo.springboot: debug
+  #\u9ED8\u8BA4\u52A0\u8F7D\u6B64\u65E5\u5FD7\u6587\u4EF6
+  #config: classpath:log-config.xml

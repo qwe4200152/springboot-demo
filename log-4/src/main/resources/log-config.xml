@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="sout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%highlight([%-5level]) %d{yyyy-MM-dd HH:mm:ss} [%thread] - %cyan(%logger) : %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="err" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/logs/log-4/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/logs/backadmin/error%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%-20thread] - %logger : %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <root level="ERROR">
+        <appender-ref ref="sout"/>
+        <appender-ref ref="err"/>
+    </root>
+    <logger name="demo.springboot" level="DEBUG"/>
+</configuration>
