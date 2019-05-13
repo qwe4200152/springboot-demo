@@ -1,0 +1,9 @@
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.163.com
+    port: 465
+    username: shadow4lee@163.com
+    password: enze5210
+    properties:
+      mail.smtp.ssl.enable: true
